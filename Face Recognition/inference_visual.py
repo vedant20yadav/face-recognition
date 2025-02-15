@@ -3,7 +3,7 @@ import cv2
 import requests
 
 # Retrieve API key from environment variable
-API_KEY = os.getenv("ROBOFLOW_API_KEY")  
+API_KEY = os.getenv("ROBOFLOW_API_KEY")
 print("Using API Key:", API_KEY)  # Debug print
 
 MODEL_ID = "face-recognition-tw2ab/4"  # Verify this is correct on your dashboard

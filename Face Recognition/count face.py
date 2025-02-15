@@ -17,17 +17,17 @@ model = project.version(4).model  # Update if needed
 input_image = "Face Recognition/f.jpg"
 
 # Run prediction
-results = model.predict(input_image, confidence=40, overlap=30).json()
-print(f"Total Faces Detected: {len(results['predictions'])}")
+results = model.predict(input_image, confidence=40, overlap=30).json();
+print(f"Total Faces Detected: {len(results['predictions'])}");
 
 # Display output
-image = cv2.imread(input_image)
+image = cv2.imread(input_image);
 for pred in results["predictions"]:
-    x, y, w, h = int(pred["x"]), int(pred["y"]), int(pred["width"]), int(pred["height"])
-    start = (x - w // 2, y - h // 2)
-    end = (x + w // 2, y + h // 2)
-    cv2.rectangle(image, start, end, (255, 0, 0), 2)
+    x, y, w, h = int(pred["x"]), int(pred["y"]), int(pred["width"]), int(pred["height"]);
+    start = (x - w // 2, y - h // 2);
+    end = (x + w // 2, y + h // 2);
+    cv2.rectangle(image, start, end, (255, 0, 0), 2);
 
-cv2.imshow("Face Count", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.imshow("Face Count", image);
+cv2.waitKey(0);
+cv2.destroyAllWindows();

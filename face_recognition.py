@@ -3,12 +3,12 @@ import requests
 from roboflow import Roboflow
 import cv2
 
-# Get API Key from environment variable
+# Grab API Key from environment variable 
 API_KEY = "LhTB2xgn5tVxptXfmyYD"
 if not API_KEY:
     raise ValueError("API Key not found! Make sure it's set in environment variables.")
 
-# Initialize Roboflow
+# Initialize Roboflow 
 rf = Roboflow(api_key=API_KEY)
 project = rf.workspace().project("face-recognition-tw2ab")
 model = project.version(4).model  # Update version if needed
